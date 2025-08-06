@@ -43,3 +43,28 @@ typescript 5.9.2
 typescript-language-server 4.4.0
 vitest 3.2.4
 #+end_example
+
+#+begin_src sh :results output verbatim
+pnpm why vite
+#+end_src
+
+#+results:
+#+begin_example
+Legend: production dependency, optional only, dev only
+
+astro-vitest@0.0.1 /Users/jcf/code/astro-vitest (PRIVATE)
+
+dependencies:
+astro 5.12.8
+├── vite 6.0.2
+└─┬ vitefu 1.1.1
+  └── vite 6.0.2 peer
+
+devDependencies:
+vitest 3.2.4
+├─┬ @vitest/mocker 3.2.4
+│ └── vite 6.0.2 peer
+├── vite 6.0.2
+└─┬ vite-node 3.2.4
+  └── vite 6.0.2
+#+end_example
