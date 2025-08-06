@@ -1,0 +1,45 @@
+#+title: Astro Vitest
+
+The [[https://docs.astro.build/en/guides/testing/][testing docs]] of Astro mention use of =vitest=, providing the following
+example configuration:
+
+#+begin_src typescript
+/// <reference types="vitest" />
+import { getViteConfig } from 'astro/config';
+
+export default getViteConfig({
+  test: {
+    // Vitest configuration options
+  },
+});
+#+end_src
+
+Unfortunately, that configuration fails to type-check.
+
+#+begin_src sh :results output verbatim
+tsc --noEmit 2>&1
+#+end_src
+
+#+results:
+: vitest.config.ts(5,3): error TS2353: Object literal may only specify known properties, and 'test' does not exist in type 'UserConfig'.
+
+* Dependencies
+#+begin_src sh :results output verbatim
+pnpm list
+#+end_src
+
+#+results:
+#+begin_example
+Legend: production dependency, optional only, dev only
+
+astro-vitest@0.0.1 /Users/jcf/code/astro-vitest (PRIVATE)
+
+dependencies:
+astro 5.12.8
+
+devDependencies:
+@astrojs/check 0.9.4
+typescript 5.9.2
+typescript-language-server 4.4.0
+vitest 3.2.4
+#+end_example

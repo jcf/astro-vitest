@@ -1,0 +1,3 @@
+/.astro/
+/.devenv.flake.nix
+/node_modules/
