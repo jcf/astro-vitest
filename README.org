@@ -24,7 +24,7 @@ tsc --noEmit 2>&1
 : vitest.config.ts(5,3): error TS2353: Object literal may only specify known properties, and 'test' does not exist in type 'UserConfig'.
 
 * Dependencies
-#+begin_src sh :results output verbatim
+#+begin_src sh :results output verbatim :exports both
 pnpm list
 #+end_src
 
@@ -44,7 +44,7 @@ typescript-language-server 4.4.0
 vitest 3.2.4
 #+end_example
 
-#+begin_src sh :results output verbatim
+#+begin_src sh :results output verbatim :exports both
 pnpm why vite
 #+end_src
 
